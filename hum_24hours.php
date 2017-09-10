@@ -11,7 +11,7 @@ if(!file_exists('pic/hum_24hours.png'))
         $sql =<<<EOF
          SELECT * FROM DATA_24HOURS ORDER BY ID ASC;
 EOF;
-        #这个EOF不能动啊啊啊，一动就报错，位置必须是打头，后面不能有东西
+        #这个EOF的位置一动就报错，但是原因不明
 
         $ret = $db->query($sql);
         while($row = $ret->fetchArray(SQLITE3_ASSOC))
